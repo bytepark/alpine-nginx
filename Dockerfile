@@ -11,7 +11,7 @@ RUN apk add --update --no-cache curl bash
 
 # Add NGINX-Webserver with NAXSI
 RUN apk upgrade -U && \
-    apk --update --repository=http://dl-4.alpinelinux.org/alpine/edge/testing add \
+    apk --update add \
     nginx \
     shadow
 
