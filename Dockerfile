@@ -11,8 +11,8 @@ RUN apk add --update --no-cache curl bash
 
 # Add NGINX-Webserver with NAXSI
 RUN apk upgrade -U && \
-    apk --update add \
-    nginx \
+    apk --update --repository=http://dl-4.alpinelinux.org/alpine/v3.5/main/ add \
+    'nginx=1.10.3-r0' \
     shadow
 
 COPY /rootfs /
